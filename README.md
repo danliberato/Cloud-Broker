@@ -2,19 +2,20 @@
 
 This simple project is intended to apply the Cloud Broker (CB) concepts.
 There are 3 main features:
-* Disclosure of resources by providers
-* Resource request in the Cloud Broker by clients
-* Use of resource in providers
+* Disclosure of resources by providers;
+* Resource request in the Cloud Broker by clients;
+    * CB will always select the most cheap resource that matches with the client request;
+* Use of resource in providers;
 
 Definitions:
-* Resources: Virtual Machines (VM)
-* VM: represented by a tuple in a table (vCPUs, RAM, Storage, price, isAvaliable, provider Name, providerAP)
-* Provider: A client from CB, a server for the client
-    * Controls clients requests, releases/reserves VMs, redirect client to a selected Provider
-* Client: consumes Provider resources by requesting it to the CB
+* Resources: Virtual Machines (VM);
+* VM: represented by a tuple in a table (vCPUs, RAM, Storage, price, isAvaliable, provider Name, providerAP);
+* Provider: A client from CB, a server for the client;
+    * Controls clients requests, releases/reserves VMs, redirect client to a selected Provider;
+* Client: consumes Provider resources by requesting it to the CB;
 
 You might know:
-Multithreaded server/client sockets
+Multithreaded server/client sockets.
 ### Installation
 ```sh
 $ 	apt-get install python3
@@ -25,7 +26,7 @@ $	python3 -m pip install boto3
 ```
 
 ### New here?
-Some of the link that I have used for this little project.
+Some of the links that I have used for this little project.
 
 | Issue? | Link |
 | ------ | ------ |
@@ -48,8 +49,8 @@ Verify the configs. It, by default, runs at 8888 port.
 
 ### ToDos
 
- - When a VM get modified the provider must update both BC and client about (it's already done in the table)
- - Improve management by adding a better "interface"
+ - When a VM get modified the provider must update both BC and client about (it's already done in the table);
+ - Improve management by adding a better "interface";
 
 # Workflow
 ![Alt text](https://i.imgur.com/WjJGPl6.png)
