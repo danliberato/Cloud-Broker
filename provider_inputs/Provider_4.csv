@@ -1,0 +1,3 @@
+id (N),RAM (N),isAvaliable (N),price (N),providerName (S),capStorage (N),vCPUs (N)
+5,64,1,98,provider_4,50000,10
+8,32,1,73,provider_4,2000,12

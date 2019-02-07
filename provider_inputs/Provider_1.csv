@@ -1,0 +1,6 @@
+id (N),RAM (N),isAvaliable (N),price (N),providerName (S),capStorage (N),vCPUs (N)
+1,256,1,130,provider_1,5000,12
+3,256,1,300,provider_1,5000,16
+6,64,1,50,provider_1,500,12
+11,8,1,30,provider_1,500,4
+13,128,1,60,provider_1,500,10

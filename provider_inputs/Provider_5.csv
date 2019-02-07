@@ -1,0 +1,15 @@
+id (N),RAM (N),isAvaliable (N),price (N),providerName (S),capStorage (N),vCPUs (N)
+115,1,1,900,provider_5,1,1
+154,1,1,50,provider_5,1,1
+543,1,1,98,provider_5,1,1
+234,1,1,111,provider_5,1,1
+432,1,1,31,provider_5,1,1
+662,1,1,5,provider_5,1,1
+777,2,1,10,provider_5,2,2
+666,2,1,12,provider_5,2,2
+555,2,1,12,provider_5,2,2
+444,2,1,13,provider_5,2,2
+333,3,1,100,provider_5,3,3
+222,3,1,1000,provider_5,3,3
+111,3,1,5000,provider_5,3,3
+678,3,1,10000,provider_5,3,3
