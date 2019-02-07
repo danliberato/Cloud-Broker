@@ -35,7 +35,7 @@ def Main():
 					soc.send(message.encode("utf8"))
 					vm = json.loads(soc.recv(max_buffer_size).decode("utf8"))
 					message = 'Best VM:\n'+ formatVM(vm) + '\n'
-					if(input('Do you accepct this VM? (you will be redirect to this Provider') == 'Y'):
+					if(input('Do you accept this VM? (you will be redirect to this Provider) ') == 'Y'):
 						message = json.dumps({"redirect": "Y"})
 						
 				elif opt == 'r': 	#client wants get rid of VM
@@ -76,7 +76,8 @@ def formatVM(vm):
 		"\n\t-vCPUs: " + str(vm['vCPUs'])+
 		"\n\t-RAM: " + str(vm['RAM'])+"GB"+
 		"\n\t-Storage: " + str(vm['capStorage'])+"GB"+
-		"\n\t-Price: U$" + str(vm['price']))
+		"\n\t-Provider: " + str(vm['providerName'])+
+		"\n\t-Price: U$ " + str(vm['price']))
 
 def options():
 	print('p : Print current VM configuration')
