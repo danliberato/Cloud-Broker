@@ -1,14 +1,20 @@
 # Cloud Broker
 
-This simple project is intended to apply the Cloud Broker concepts.
-
+This simple project is intended to apply the Cloud Broker (CB) concepts.
 There are 3 main features:
 * Disclosure of resources by providers
 * Resource request in the Cloud Broker by clients
 * Use of resource in providers
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+Definitions:
+* Resources: Virtual Machines (VM)
+* VM: represented by a tuple in a table (vCPUs, RAM, Storage, price, isAvaliable, provider Name, providerAP)
+* Provider: A client from CB, a server for the client
+    * Controls clients requests, releases/reserves VMs, redirect client to a selected Provider
+* Client: consumes Provider resources by requesting it to the CB
 
+You might know:
+Multithreaded server/client sockets
 ### Installation
 ```sh
 $ 	apt-get install python3
@@ -42,7 +48,8 @@ Verify the configs. It, by default, runs at 8888 port.
 
 ### ToDos
 
- - Hold a sec...
+ - When a VM get modified the provider must update both BC and client about (it's already done in the table)
+ - Improve management by adding a better "interface"
 
 License
 ----
