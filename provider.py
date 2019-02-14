@@ -3,7 +3,7 @@ import socket
 import sys
 import json
 import csv
-from DecimalEncoder import DecimalEncoder
+from classes.DecimalEncoder import DecimalEncoder
 
 HOST = "localhost"
 PORT = 8888
@@ -58,7 +58,8 @@ def convert_csv_to_json_list(file):
 			data['isAvaliable'] = int(row['isAvaliable (N)'])
 			data['vCPUs'] = int(row['vCPUs (N)'])
 			data['capStorage'] = int(row['capStorage (N)'])
-			data['providerName'] = row['providerName (S)']
+			data['providerName'] = row['providerName (S)'],
+			data['host'] = HOST
 			items.append(data)
 	return items
 
@@ -71,6 +72,7 @@ def updateVM():
 		"capStorage": input('capStorage:'),
 		"price": input('Price:'),
 		"isAvaliable": 1,
+		"host": HOST,
 		}
 	return vm	
 

@@ -14,8 +14,17 @@ Definitions:
     * Controls clients requests, releases/reserves VMs, redirect client to a selected Provider;
 * Client: consumes Provider resources by requesting it to the CB;
 
-You might know:
+----
+### How it works?
+Cloud Broker is always online.
+A provider connects to CB and publish its resources. For that, it reads a CSV file ("provider_inputs\*.csv") which contains all VMs and sends it to CB.
+CB update its database with all new resources.
+Client now is able to connect and select a VM. When a client is allocated to a VM, it has an option to be redirected (use a VM).
+
+----
+### You might know:
 Multithreaded server/client sockets.
+----
 ### Installation
 ```sh
 $ 	apt-get install python3
@@ -24,7 +33,7 @@ $	python3 -m pip install wheel
 $	python3 -m pip install awscli
 $	python3 -m pip install boto3
 ```
-
+----
 ### New here?
 Some of the links that I have used for this little project.
 
@@ -34,19 +43,19 @@ Some of the links that I have used for this little project.
 | Boto3 Docs | [Here](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/dynamodb.html) |
 | Run EC2, DynamoDB, IAM | [Here](https://www.youtube.com/watch?v=WE303yFWfV4) |
 
-
+----
 ### Development
 
 Want to contribute? Nice!
 Feel free to to add new features or even improve my work with you knowledge.
-
+----
 ### Configs
 Verify the configs. It, by default, runs at 8888 port.
 
 ```sh
 127.0.0.1:8888
 ```
-
+----
 ### ToDos
 
  - When a VM get modified the provider must update both BC and client about (it's already done in the table);
@@ -56,7 +65,6 @@ Verify the configs. It, by default, runs at 8888 port.
 ![Alt text](https://i.imgur.com/WjJGPl6.png)
 
 # License
-----
 MIT
 
 # md
